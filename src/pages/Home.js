@@ -1,6 +1,6 @@
 import React from "react";
 import useFetch from "../hooks/useFetch";
-import './Home.css'
+import "./Home.css";
 
 const Home = () => {
   let url = "http://localhost:3001/blogs";
@@ -15,7 +15,7 @@ const Home = () => {
           <div key={blog.id} className="card">
             <h3>{blog.title}</h3>
             <p>posted by - {blog.author}</p>
-            <a href="">Read More</a>
+            <a href={`/blogs/${blog.id}`}>Read More</a>
           </div>
         ))}
     </div>
